@@ -116,7 +116,9 @@ void loop() {
 
   Serial.print(maxBin.magnitude);
   Serial.print("  ");
-  Serial.println(maxBin.bin);
-  FastLED.setBrightness(map(maxBin.magnitude, 0, highestMagnitude, 0, 255));
+  Serial.print(maxBin.bin);
+  Serial.print("  ");
+  Serial.println(highestMagnitude);
+  FastLED.setBrightness(map(maxBin.magnitude, 0, highestMagnitude, 0, 125));
   FastLED.show();
 }
